@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"=//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+
+	<session-factory>
+	
+		<!-- Database Dialect & Driver for mySQL-->
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+
+		<!-- Database Dialect & Driver for Oracle 9G 
+		<property name="dialect">org.hibernate.dialect.Oracle9Dialect</property>
+		<property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property>-->
+
+
+		<property name="connection.username">USERNAME</property>
+		<property name="connection.password">PASSWORD</property>
+		
+		<!-- Database Details Template for mySQL-->
+		<property name="connection.url">jdbc:mysql://SERVER:PORT/SCHEMA</property>
+		
+		<!-- Database Details Template for OracleDB
+		<property name="connection.url">jdbc:oracle:thin:@SERVER:PORT/SCHEMA</property>-->
+		
+		<property name="connection.pool_size">1</property>
+		<property name="hibernate.default_schema">SCHEMA</property>
+
+		<!-- Additional Properties -->
+		<property name="show_sql">true</property>
+
+		<property name="hibernate.current_session_context_class">thread</property>
+	</session-factory>
+
+</hibernate-configuration>
